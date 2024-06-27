@@ -14,6 +14,7 @@ class loginCustom extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Image.asset(
+                  
                   'assets/texto.png',
                   width: 150,
                 ),
