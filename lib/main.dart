@@ -18,10 +18,14 @@ class AccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('YESSI & PAU'),
-        backgroundColor: Colors.pink[200],
+        title: Text(
+          'YESSI & PAU',
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Color(0xFFF4A4B5),
+        elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: Icon(Icons.menu, color: Colors.black),
           onPressed: () {},
         ),
       ),
@@ -29,32 +33,56 @@ class AccountPage extends StatelessWidget {
         children: [
           Container(
             color: Colors.white,
-            padding: EdgeInsets.all(16.0),
-            child: Text(
-              'Cuenta',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            padding: EdgeInsets.symmetric(vertical: 16.0),
+            child: Center(
+              child: Text(
+                'Cuenta',
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
             ),
           ),
           Expanded(
             child: Container(
-              color: Colors.blue[200],
+              color: Color(0xFF94BDF2),
               padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Dirección: 742 de Evergreen Terrace',
-                    style: TextStyle(fontSize: 18),
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text('Dirección',
+                              style: TextStyle(
+                                  fontSize: 18, color: Colors.black))),
+                      Expanded(
+                          child: Text('Código Postal',
+                              style: TextStyle(
+                                  fontSize: 18, color: Colors.black))),
+                      Expanded(
+                          child: Text('País',
+                              style: TextStyle(
+                                  fontSize: 18, color: Colors.black))),
+                    ],
                   ),
                   SizedBox(height: 8.0),
-                  Text(
-                    'Código Postal: 42820',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  SizedBox(height: 8.0),
-                  Text(
-                    'País: USA',
-                    style: TextStyle(fontSize: 18),
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text('742 de Evergreen Terrace',
+                              style: TextStyle(
+                                  fontSize: 18, color: Colors.black))),
+                      Expanded(
+                          child: Text('42820',
+                              style: TextStyle(
+                                  fontSize: 18, color: Colors.black))),
+                      Expanded(
+                          child: Text('USA',
+                              style: TextStyle(
+                                  fontSize: 18, color: Colors.black))),
+                    ],
                   ),
                 ],
               ),
@@ -63,7 +91,7 @@ class AccountPage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.purple[100],
+        color: Color(0xFFD1B2E0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
