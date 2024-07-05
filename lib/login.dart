@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+// Ensure you have this import if it's not in another file
+
 
 class loginCustom extends StatelessWidget {
   const loginCustom({super.key});
@@ -14,7 +15,6 @@ class loginCustom extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Image.asset(
-                  
                   'assets/texto.png',
                   width: 150,
                 ),
@@ -23,16 +23,20 @@ class loginCustom extends StatelessWidget {
                   width: 300,
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(top: 8.0,left: 15.0,right: 15.0),
+                  padding: 
+                  EdgeInsets.only(top: 8.0,left: 15.0,right: 15.0),
                   child: Column(
                     children: [
                       Text('CORREO'),
                       TextField(
-                        keyboardType: TextInputType.emailAddress,
+                        keyboardType: 
+                        TextInputType.emailAddress,
                         decoration: InputDecoration(
                           filled: true,
-                          fillColor: Color.fromARGB(255, 229, 210, 232),
-                          prefixIcon: Icon(Icons.email, color: Colors.blue),
+                          fillColor: 
+                          Color.fromARGB(255, 229, 210, 232),
+                          prefixIcon: Icon(Icons.email, 
+                          color: Colors.blue),
                           border: OutlineInputBorder(),
                           labelText: 'Ingrese su correo',
                         ),
@@ -46,7 +50,7 @@ class loginCustom extends StatelessWidget {
                     children: [
                       Text('CONTRASEÑA'),
                       TextField(
-                        
+                        obscureText: true,  // This will obscure the text input
                         decoration: InputDecoration(
                           filled: true,
                           fillColor: Color.fromARGB(255, 229, 210, 232),
@@ -56,6 +60,7 @@ class loginCustom extends StatelessWidget {
                           ),
                           border: OutlineInputBorder(),
                           labelText: 'Ingrese su contraseña',
+                          
                         ),
                       ),
                     ],
@@ -64,22 +69,28 @@ class loginCustom extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // Navigate to the cart screen
+                      Navigator.pushNamed(context, '/cart');
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orange,
                     ),
-                    child: Container(
+                    child: const SizedBox(
                         height: 60,
                         width: 250,
                         child: Center(
                             child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: const Text(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
                             'Login',
-                            style: TextStyle(color: Colors.white, fontSize: 23),
+                            style: TextStyle(color: 
+                            Colors.white, fontSize: 23),
                             
                           ),
-                        ))),
+                        )
+                      )
+                    ),
                   ),
                 ),
               ],
